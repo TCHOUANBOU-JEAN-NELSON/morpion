@@ -1,14 +1,21 @@
-let tour=document.getElementsByClassName("tour")
+let tour=document.querySelector(".tour")
+let index=0
 export function jouer(event){
-    for (let index = 0; index < 6; index++) {
+    
         if(index%2===0){
-            tour.innetText="tour joueur 1"
-            event.currentTarget.innetText="❎"
+            tour.innerText="tour joueur 1"
+            if(!(event.currentTarget.innerText==="❎" || event.currentTarget.innerText==="⭕"))
+                {event.currentTarget.innerText="❎"
+                    index++
+                }
         }
         else{
-            tour.innetText="tour joueur 2"
-            event.currentTarget.innetText="⭕"
+            tour.innerText="tour joueur 2"
+            if(!(event.currentTarget.innerText==="❎" || event.currentTarget.innerText==="⭕"))
+                {event.currentTarget.innerText="⭕"
+                    index++
+                }
         }
         
-    }
+        
 }
