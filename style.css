@@ -1,0 +1,19 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    color: darkgray;
+}
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td{
+    border: solid bisque 1px;
+    font-size: 10vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px;
+    width: 20vw;
+    height: 20vw;
+}
