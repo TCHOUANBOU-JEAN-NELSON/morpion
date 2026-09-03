@@ -18,17 +18,20 @@ function resultat(tour){
                 return true
             }
 
-            if (table[i][j]===tour && table[i][j]===tour && table[i][j]===tour)
+            if (table[0][0]===tour && table[1][1]===tour && table[2][2]===tour)
+            {
+                return true
+            }
+            if (table[0][2]===tour && table[1][1]===tour && table[2][0]===tour)
             {
                 return true
             }
 
-            else
-            {
-                return false
-            }
+           
         
     }
+
+    return false
 }
 
 export {resultat,tableau}

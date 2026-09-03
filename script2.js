@@ -1,6 +1,7 @@
 let tour=document.querySelector(".tour")
 import { resultat,tableau } from "./script3.js"
 let index=0
+let bool=false
 export function jouer(event){
     
         if(index%2===0){
@@ -9,9 +10,13 @@ export function jouer(event){
                 {event.currentTarget.innerText="❎"
                     index++
                     tableau(event.currentTarget.id,1)
-                    if(index==5 || index==6)
+                    if(index>=5)
                     {
-                        bool=resultat(1)
+                        
+                        if(resultat(1)){
+                            alert("victoire joueur 1")
+                            bool =true
+                        }
                     }
 
                 }
@@ -22,11 +27,18 @@ export function jouer(event){
                 {event.currentTarget.innerText="⭕"
                     index++
                     tableau(event.currentTarget.id,2)
-                    if(index==5 || index==6)
+                    if(index>=5)
                     {
-                        bool=resultat(1)
+                        if(resultat(1)){
+                            alert("victoire joueur 2")
+                            bool =true
+                        }
                     }
                 }
+        }
+
+        if (index>8 && (!bool) ){
+            alert("match null")
         }
         
         
